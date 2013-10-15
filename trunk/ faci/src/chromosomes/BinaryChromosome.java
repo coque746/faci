@@ -48,7 +48,7 @@ public class BinaryChromosome extends Chromosome {
 		
 		for(int i=0;i<chromosomeSize;i++)
 		{	//crea un cromosoma binario con 0 y 1 al azar
-			
+			this.geneStrip.add(r.nextInt(2));			
 		}
 
 	}	
