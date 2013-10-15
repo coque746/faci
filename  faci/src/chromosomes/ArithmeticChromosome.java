@@ -7,7 +7,10 @@ import crossingMethods.Reproductor;
 
 public class ArithmeticChromosome extends Chromosome {
 
+	double crossingProbability=0;
 	
+
+	double mutationProbability=0;
 
 	protected double arithmeticLowerRange=0;
 	protected double arithmeticTopRange=0;
@@ -23,7 +26,13 @@ public class ArithmeticChromosome extends Chromosome {
 		
 		
 	}
+	public double getCrossingProbability() {
+		return crossingProbability;
+	}
 
+	public double getMutationProbability() {
+		return mutationProbability;
+	}
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub

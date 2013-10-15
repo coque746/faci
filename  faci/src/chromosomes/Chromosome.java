@@ -13,8 +13,6 @@ public abstract class Chromosome {
 	
 	protected ArrayList geneStrip;
 	private double fitnessValue;
-	protected double crossingProbability;
-	protected double mutationProbability;
 	protected Reproductor reproductor;
 	protected int age;
 	protected int chromosomeSize;
@@ -36,13 +34,7 @@ public abstract class Chromosome {
 		return geneStrip;
 	}
 
-	public double getCrossingProbability() {
-		return crossingProbability;
-	}
-
-	public double getMutationProbability() {
-		return mutationProbability;
-	}
+	
 
 	public void setGeneStrip(ArrayList<?> geneStrip) {
 		this.geneStrip = geneStrip;
