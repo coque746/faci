@@ -215,7 +215,31 @@ public class Genetic extends Algorithm{
 	@Override
 	public void runAlgorithm() throws ExceptionWrongParameterClass
 	{
-		//TODO: Some implementation
+		ArrayList<Chromosome> parents = new ArrayList<Chromosome>();
+		ArrayList<Chromosome> parentsPair = new ArrayList<Chromosome>();
+		ArrayList<Chromosome> children = new ArrayList<Chromosome>();
+		
+		parents = this.population.makeSelection();
+		while(!this.stopCriteria.reached(this))
+		{
+			//System.out.println("hola! van "+this.cycles+" ciclos");
+			this.population.selectParents(parentsPair);
+			//cruzo y ahora tengo los nuevos hijos
+			children=this.population.makeCrossing(parentsPair);
+			//si no paso la prob de cruza no se puede hacer lo que sigue
+			if(children !=null & children.size()>0)
+			{//calculo el fitness de los hijos
+				
+				this.calculateChildFitness(children.get(0));
+				this.calculateChildFitness(children.get(1));
+				this.population.renewPopulation(parents,children);
+			}
+			//este metodo solo llama al makeReplacement
+			
+			this.cycles++;
+			//System.out.println("no se alcanzo el criterio de parada");
+		}
+		
 	}
 
 	/**
