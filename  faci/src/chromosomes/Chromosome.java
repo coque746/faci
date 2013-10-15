@@ -102,7 +102,6 @@ public abstract class Chromosome {
 		this.chromosomeSize = chromosomeSize;
 	}
 
-	public abstract double getGeneToWeight(int j);
 
 
 	public void print() {

@@ -57,11 +57,6 @@ public class ArithmeticChromosome extends Chromosome {
 		
 	}
 
-	@Override
-	public double getGeneToWeight(int j) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	
    protected void initGeneStrip()
