@@ -102,11 +102,6 @@ public class BinaryChromosome extends Chromosome {
 		}
 		return binary;
 	}
-	@Override
-	public double getGeneToWeight(int j) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 
 }
