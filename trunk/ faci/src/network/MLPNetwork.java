@@ -7,33 +7,46 @@ import java.util.List;
 
 import objectiveFunctions.Function;
 
-import configuration.Config;
-import configuration.ConfigRNA;
 import configuration.TestData;
 
 public class MLPNetwork extends networkTopology implements Serializable  {
 
-
-	public MLPNetwork(ConfigRNA config) {
+	public MLPNetwork()
+	{
 		super();
-		this.config=config;
+	}
+		
+	public MLPNetwork(int sizeIn, int sizeOut,int sizeHidden,int layerAmount,
+			String inputHiddenFunction, String hiddenActivFuntion,String outputActivFuntion,
+			double n) {
+		super();
+		
+		this.initialize(sizeIn, sizeOut, sizeHidden, layerAmount, inputHiddenFunction, hiddenActivFuntion, 
+				outputActivFuntion, n);
+	}
+	
+	public void initialize(int sizeIn, int sizeOut,int sizeHidden,int layerAmount,
+			String inputHiddenFunction, String hiddenActivFuntion,String outputActivFuntion,
+			double n) {
+		
 		//tamaño de cada tipo de capa
-		this.sizeInput = config.getSizeIn();
-		this.sizeOutput = config.getSizeOut();
-		this.sizeHidden = config.getSizeHidden();
+		this.sizeInput = sizeIn;
+		this.sizeOutput = sizeOut;
+		this.sizeHidden = sizeHidden;
 		//cantidad de capas
-		this.layerAmount=config.getLayerAmount();
+		this.layerAmount=layerAmount;
 		
 		//funcion de entrada a neuronas de capa oculta
-		this.inputHiddenFunction = config.getInputHiddenFunction();
+		this.inputHiddenFunction = inputHiddenFunction;
 		//System.out.print("funcion entrada capa oculta:"+this.inputHiddenFunction+"\n");
 		//funcion de activacion neuronas de capa oculta
-		this.activHiddenFunction = config.getActivationHiddenFunction();
-		this.activOutPutFunction = config.getActivationOutputFunction();
-		this.n=config.getN();
-		//System.out.print("funcion activacion capa oculta:"+this.activHiddenFunction+"\n");
+		this.activHiddenFunction = hiddenActivFuntion;
+		this.activOutPutFunction = outputActivFuntion;
+		//velocidad de aprendizaje
+		this.n=n;
 	}
-
+	
+	
 	public List<HiddenLayer> getHiddenLayers()
 	{
 		return this.hiddenLayers;
@@ -153,7 +166,8 @@ public class MLPNetwork extends networkTopology implements Serializable  {
 		//nueva red con la misma configuracion
 		
 		
-		MLPNetwork newNet = new MLPNetwork(config);
+		MLPNetwork newNet = new MLPNetwork(sizeInput,sizeOutput, sizeHidden,layerAmount,
+				inputHiddenFunction,activHiddenFunction,activOutPutFunction,n);
 		newNet.createTopology();
 		ArrayList<ArrayList<Double>> inputWeights = new ArrayList<ArrayList<Double>>();
 /*	LAS CAPAS DE ENTRADA NO TIENEN ENLACESSSSS!!!!!!!!!!		
