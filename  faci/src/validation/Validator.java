@@ -3,7 +3,8 @@ package validation;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import algorithms.Algorithm;
+import trainingMethod.Algorithm;
+
 
 
 import network.networkTopology;

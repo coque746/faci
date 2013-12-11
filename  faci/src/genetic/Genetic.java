@@ -15,12 +15,12 @@ import crossingMethods.Reproductor;
 
 import chromosomes.Chromosome;
 
-import algorithms.Algorithm;
 
 
 import replacementMethods.Replacement;
 import selectionMethods.Selector;
 import stoppingCriteria.GeneticStoppingCriterion;
+import trainingMethod.Algorithm;
 import utils.ComparatorChromosome;
 
 import exceptions.ExceptionWrongParameterClass;

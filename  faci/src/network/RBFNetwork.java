@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import objectiveFunctions.Function;
 
-import configuration.Config;
+
 import configuration.TestData;
 
 public class RBFNetwork  extends networkTopology {
 
-	public RBFNetwork(Config config) {
+	public RBFNetwork() {
 		
 		/*this.selectedActivFunction = config.getFunction();
 		this.sizeHidden = config.getSizeHidden();*/

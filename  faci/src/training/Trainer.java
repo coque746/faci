@@ -4,7 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import algorithms.Algorithm;
+import trainingMethod.Algorithm;
+
 
 import exceptions.ExceptionWrongParameterClass;
 import network.ANNTopology;

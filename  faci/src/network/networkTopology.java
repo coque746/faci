@@ -6,8 +6,7 @@ import java.util.List;
 
 import objectiveFunctions.Function;
 
-import configuration.Config;
-import configuration.ConfigRNA;
+
 import configuration.TestData;
 
 public abstract class networkTopology extends ANNTopology implements Serializable{
@@ -20,7 +19,7 @@ public abstract class networkTopology extends ANNTopology implements Serializabl
 	protected String inputHiddenFunction;
 	protected String activHiddenFunction;
 	protected String activOutPutFunction;
-	protected transient ConfigRNA config;
+	
 	
 	//capas
 	protected InputLayer inputLayer;

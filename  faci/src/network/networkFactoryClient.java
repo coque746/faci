@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import configuration.Config;
-import configuration.ConfigRNA;
 import configuration.TestData;
 
 public class networkFactoryClient {
@@ -16,22 +14,22 @@ public class networkFactoryClient {
 
 	private ANNTopology topology ;
 
-	public networkFactoryClient(String topologySelected, ConfigRNA config) throws IOException
+	public networkFactoryClient(String topologySelected) throws IOException
 	{
 		
 		switch (topologySelected)
 		{
 		case "MLP":
 			//System.out.print("es mlp \n");
-			this.network = new MLPNetwork(config);
+			this.network = new MLPNetwork();
+			
 			break;
 		case "RBF":
-			this.network= new RBFNetwork(config);
+			this.network= new RBFNetwork();
 			break;
 		}	
 		
-		this.createNetwork();
-		return;
+		
 	}
 
 
@@ -47,25 +45,5 @@ public class networkFactoryClient {
 		return network;
 	}
     
-	/**
-	 * ESTO LO TENGO Q HACER EN EL MAIN!!!!
-	 * LUEGO INSTANCIAR ESTA CLASEEEEEE
-	 
-	Config config = Config.getInstance();
-	//aca se va a crear la topologia de acuerdo a los parametros que tenga el config
-	//se crearan las estructuras de datos necesarias para contener capas, neuronas, etc
-	//esto lo hago en el 
-	String topologySelected=config.getTopology();
-	
-	switch (topologySelected)
-	{
-	case "MLP":
-		this.network= new MLPNetwork(config);
-		break;
-	case "RBF":
-		this.network= new RBFNetwork(config);
-		break;
-	}*/
 
-	
 }
