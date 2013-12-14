@@ -35,8 +35,6 @@ public abstract class Algorithm {
     protected ArrayList<ArrayList<Double>> target;
 
     public Algorithm() {
-    	//TODO: IMPORTANTE CONCEPTUALMENTE ===> EESTE ARRAY LIST DEBE SER UN OBJETO GENERICO 
-    	//TODO: CREAR UNA CLASE "NETWORKINPUT" QUE SE PUEDA USAR PARA DEJAR GENERICOS LOS METODOS DE ENTRENAMIENTO Y VALIDACION
         this.in = new ArrayList<ArrayList<Double>>();
         this.target = new ArrayList<ArrayList<Double>>();
     }
