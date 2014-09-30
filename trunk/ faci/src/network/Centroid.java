@@ -43,4 +43,10 @@ public class Centroid implements Function {
 		return 0;
 	}
 
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

@@ -38,6 +38,12 @@ public class Sigmoid implements Function, Serializable {
 		//en esta funcion no se va a usar xq en gral se usa como func de activ
 		return 0;
 	}
+
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 
