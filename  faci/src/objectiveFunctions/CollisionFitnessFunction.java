@@ -135,5 +135,11 @@ public class CollisionFitnessFunction extends GeneticFitnessFunction {
 		MAX=(((n-1)*n)/2);
 	}
 
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 }

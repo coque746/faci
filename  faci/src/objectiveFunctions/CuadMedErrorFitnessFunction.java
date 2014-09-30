@@ -77,6 +77,11 @@ public class CuadMedErrorFitnessFunction extends GeneticFitnessFunction {
 		return finalValue;
 		
 	}
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 
 
