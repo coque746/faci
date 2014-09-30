@@ -56,6 +56,12 @@ public class NormalizedFitnessFunction extends GeneticFitnessFunction {
 		return 0;
 	}
 
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 
 }
