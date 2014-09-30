@@ -2,6 +2,8 @@ package objectiveFunctions;
 
 import java.util.ArrayList;
 
+import chromosomes.Chromosome;
+
 public interface Function {
 
     double apply(double s);
@@ -13,5 +15,6 @@ public interface Function {
 	String print();
 
 	double applyDf(ArrayList<Double> s);
-	double apply();
+	
+	double applyToPopulation(ArrayList<Chromosome> s);
 }

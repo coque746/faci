@@ -57,14 +57,11 @@ public class StandarizedFitnessFunction extends GeneticFitnessFunction {
 		return 0;
 	}
 
-
 	@Override
-	public double apply() {
+	public double applyToPopulation(ArrayList<Chromosome> s) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-	
 
 
 
