@@ -2,6 +2,7 @@ package network;
 
 import java.util.ArrayList;
 
+import chromosomes.Chromosome;
 import objectiveFunctions.Function;
 
 /**
@@ -45,10 +46,8 @@ public class CuadraticMedium implements Function {
 	}
 
 	@Override
-	public double apply() {
+	public double applyToPopulation(ArrayList<Chromosome> s) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-
 }

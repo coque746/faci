@@ -78,11 +78,9 @@ public class CuadMedErrorFitnessFunction extends GeneticFitnessFunction {
 		
 	}
 	@Override
-	public double apply() {
+	public double applyToPopulation(ArrayList<Chromosome> s) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-
 
 }
