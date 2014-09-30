@@ -47,5 +47,11 @@ public class Summatory implements Function,Serializable {
 //		me daria como resultado, la suma de tantos unos como valores de entrada tenga ;)
 		return s.size();
 	}
+
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

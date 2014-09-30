@@ -42,4 +42,10 @@ public class Identity implements Function, Serializable {
 		return 0;
 	}
 
+	@Override
+	public double apply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
