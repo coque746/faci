@@ -13,4 +13,5 @@ public interface Function {
 	String print();
 
 	double applyDf(ArrayList<Double> s);
+	double apply();
 }
